@@ -1,4 +1,4 @@
-# Scala Script Collection
+# Scala Fun Script Collection
 ## About ##
 Scala’s “scripting syntax” is just as concise as Ruby’s or Python's or Perl's (sometimes more)
 
