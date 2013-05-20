@@ -1,5 +1,4 @@
 #!/usr/bin/env scala
-!#
 
 import java.net._
 
