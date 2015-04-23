@@ -2,6 +2,7 @@
 
 import java.net._
 
+println("For posterity only as github page doesn't exist anymore."); sys.exit
 val githubURL = "https://github.com/languages/"
 val regex = "<li><a href=\"/languages/(.+)\"".r
 val url = io.Source.fromURL(githubURL).mkString
