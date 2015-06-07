@@ -14,8 +14,8 @@ import java.net.URL
 import org.apache.commons.lang3.StringEscapeUtils
 import org.htmlcleaner.TagNode
 
-  val stocks = List("AIRBUS-GROUP-4637", "ALSTOM-4607", "DISTRIBUIDORA-INTER-DE-AL-8322842", "GENFIT-16311755", "INNATE-PHARMA-35620",
-    "SOCIETE-GENERALE-4702", "SOITEC-4695", "STMICROELECTRONICS-4710", "TECHNIP-4712")
+  val stocks = List("AIRBUS-GROUP-4637", ""ALCATEL-LUCENT-4606", "ALSTOM-4607", "DISTRIBUIDORA-INTER-DE-AL-8322842", "GENFIT-16311755",
+                    "INNATE-PHARMA-35620", "SOCIETE-GENERALE-4702", "SOITEC-4695", "STMICROELECTRONICS-4710", "TECHNIP-4712")
 
   def priceTargetRec(zoneBourseId: String): List[Double] = {
     val url = s"http://www.zonebourse.com/${zoneBourseId}/consensus/"
