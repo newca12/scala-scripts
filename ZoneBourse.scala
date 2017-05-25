@@ -1,11 +1,11 @@
 #!/usr/bin/env scalas
 
 /***
- scalaVersion := "2.11.8"
+ scalaVersion := "2.12.2"
 
  libraryDependencies ++= Seq(
- "net.sourceforge.htmlcleaner" % "htmlcleaner" % "2.16",
- "org.apache.commons" % "commons-lang3" % "3.4"
+ "net.sourceforge.htmlcleaner" % "htmlcleaner" % "2.21",
+ "org.apache.commons" % "commons-lang3" % "3.5"
  )
 */
 
@@ -14,8 +14,8 @@ import java.net.URL
 import org.apache.commons.lang3.StringEscapeUtils
 import org.htmlcleaner.TagNode
 
-  val stocks = List("DISTRIBUIDORA-INTER-DE-AL-8322842", "EDF-4998", "GENFIT-16311755", "INNATE-PHARMA-35620",
-                    "MAUREL-ET-PROM-4774", "PEUGEOT-4682", "SOITEC-4695", "STMICROELECTRONICS-4710")
+  val stocks = List("DISTRIBUIDORA-INTER-DE-AL-8322842", "DBV-TECHNOLOGIES-10189744", "EDF-4998", "GENFIT-16311755", "INNATE-PHARMA-35620",
+                    "NICOX-25281955", "PEUGEOT-4682", "ORANGE-SA-4649", "SOITEC-4695", "TECHNICOLOR-6411898")
 
   def priceTargetRec(zoneBourseId: String): List[Double] = {
     val url = s"http://www.zonebourse.com/${zoneBourseId}/consensus/"
@@ -43,7 +43,7 @@ import org.htmlcleaner.TagNode
     for (elem ← elements) {
       val res = elem.getAllElements(true).toList
       val res2 = rec(res, false, Nil)
-      if (!res2.isEmpty) return res2
+      if (res2.nonEmpty) return res2
 
     }
     //Should be unreachable
